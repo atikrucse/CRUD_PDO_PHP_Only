@@ -92,17 +92,27 @@
             
                 try{
                     $query = "UPDATE employe
-                                SET name=:name, fatherName=:fatherName
+                                SET name=:name, fatherName=:fatherName, motherName=:motherName, phoneNumber=:phoneNumber, email=:email, address=:address, salary=:salary
                                 WHERE id = :id";
             
                     $emp = $connection->prepare($query);
             
                     $name=htmlspecialchars(strip_tags($_POST['name']));
                     $fatherName=htmlspecialchars(strip_tags($_POST['fatherName']));
-            
+                    $motherName=htmlspecialchars(strip_tags($_POST['motherName']));
+                    $phoneNumber=htmlspecialchars(strip_tags($_POST['phoneNumber']));
+                    $email=htmlspecialchars(strip_tags($_POST['email']));
+                    $address=htmlspecialchars(strip_tags($_POST['address']));
+                    $salary=htmlspecialchars(strip_tags($_POST['salary']));
+                    
             
                     $emp->bindParam(':name', $name);
                     $emp->bindParam(':fatherName', $fatherName);
+                    $emp->bindParam(':motherName', $motherName);
+                    $emp->bindParam(':phoneNumber', $phoneNumber);
+                    $emp->bindParam(':email', $email);
+                    $emp->bindParam(':address', $address);
+                    $emp->bindParam(':salary', $salary);
                     $emp->bindParam(':id', $id);
             
                     // Execute the query

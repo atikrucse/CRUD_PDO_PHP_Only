@@ -83,7 +83,7 @@ if($_POST){
     }
 }
 ?>
-<?php require './style/bootStyle.php' ?>
+
 <!-- <!DOCTYPE html>
     <html lang="en">
     <head>
