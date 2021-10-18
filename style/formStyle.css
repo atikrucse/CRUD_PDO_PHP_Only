@@ -35,7 +35,6 @@ input[type=text], select {
     background-color: rgb(40, 40, 179);
     color: white;
     padding: 14px 20px;
-    /* margin-left: 50%; */
     border: none;
     border-radius: 4px;
     cursor: pointer;
