@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/formStyle.css">
   </head>
   <body>
       <div class="container">
@@ -49,40 +50,42 @@
             <div class="container">
                 <h3 class="bg-success text-white text-center p-3 font-weight-bold">Update Employee Information</h3>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id={$id}");?>" method="post">
-                    <table class='table table-hover table-responsive table-bordered'>
-                    <tr>
-                        <td>Name</td>
-                        <td><input type='text' name='name' value="<?php echo htmlspecialchars($name);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td>Father Name</td>
-                        <td><input type='text' name='fatherName' value="<?php echo htmlspecialchars($fatherName);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td>Mother Name</td>
-                        <td><input type='text' name='motherName' value="<?php echo htmlspecialchars($motherName);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number</td>
-                        <td><input type='text' name='phoneNumber' value="<?php echo htmlspecialchars($phoneNumber);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type='text' name='email' value="<?php echo htmlspecialchars($email);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td><input type='text' name='address' value="<?php echo htmlspecialchars($address);  ?>" class='form-control' /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type='submit' value='Save Changes' class='btn btn-success' />
-                            <a href='index.php' class='btn btn-success'>Back to Index Page</a>
-                        </td>
-                    </tr>
-                    </table>
-                </form>
+                <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name);  ?>">
+            </div>
+
+            <div>
+                <label for="fatherName">Father Name</label>
+                <input type="text" id="fatherName" name="fatherName"  value="<?php echo htmlspecialchars($fatherName);  ?>">
+            </div>
+
+            <div>
+                <label for="motherName">Mother Name</label>
+                <input type="text" id="motherName" name="motherName" value="<?php echo htmlspecialchars($motherName);  ?>">
+            </div>
+
+            <div>
+                <label for="phone">Phone number</label>
+                <input type="text" id="phone" name="phoneNumber" value="<?php echo htmlspecialchars($phoneNumber);  ?>">
+            </div>
+        
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($email);  ?>" >
+            </div>
+
+            <div>
+                <label for="address">Address</label> <br>
+                <input type='text' name='address' value="<?php echo htmlspecialchars($address);  ?>"/>
+
+            </div>  
+            <div>
+                <input type='submit' value='Update Record' class='btn btn-warning mx-5' />
+                <a href='index.php' class='btn btn-success p-3 mx-5'>Back to Index Page</a>
+            </div> 
+            
+            </form>
             </div>
 
             <!-- For Update Employee -->
